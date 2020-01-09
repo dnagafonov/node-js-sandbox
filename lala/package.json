@@ -1,0 +1,14 @@
+{
+  "name": "lalapackage",
+  "version": "0.0.1",
+  "description": "\u001b[A\u001b[B",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "killer229",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
