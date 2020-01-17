@@ -1,9 +1,10 @@
+const chai = require(`chai`);
 const assert = require(`chai`).assert;
 const { persistence } = require(`../readFile`);
 
 describe(`Test persistance function`, () => {
     it(`num = 39`, () => {
-        assert.equal(persistence(39), 3);
+        chai.expect(persistence(39)).to.deep.equal(3);
     })
 
     it(`num = 4`, () => {

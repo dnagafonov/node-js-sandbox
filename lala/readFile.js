@@ -148,10 +148,23 @@ let persistence = (num) => {
     return res;
 }
 
-console.log(persistence(39));
+function matrixAddition(a, b){
+    return a.map((row, i) => {
+        return row.map((el, j) => {
+            return el += b[i][j];
+        })
+    })
+}
+
+function duplicateEncode(word){
+  word = word.toLowerCase().split(``);
+  return word.map(el => word.reduce((r,e) => r + (e === el ? 1 : 0), 1) > 1 ? el.join(``).split(el).join(`)`) : el.join(``).split(el).join(`(`));
+}
 
 module.exports = {
     longestSlideDown,
     persistence,
     multiplies3and5,
+    matrixAddition,
+    duplicateEncode
 }
