@@ -9,9 +9,10 @@ const rmdir = promisify(fs.rmdir);
 
 const readSomeFile = (text) => {
 
-    const dir = `${__dirname}-autocreated-dir`;
+    const dir = `${__dirname}/lala-autocreated-dir`;
     const file = `${dir}/newfile.txt`;
     let exist = false;
+    let delete = false;
 
     mkdir(dir).
     catch((error) => {
@@ -24,9 +25,8 @@ const readSomeFile = (text) => {
     then(() => writeFile(file, text)).
     then(() => readFile(file)).
     then(data => console.log(data)).
-    then(() => unlink(file)).
     then(() => exist ? Promise.resolve : rmdir(dir)).
     catch(e => console.error(e));
 }
 
-readSomeFile("2");
+readSomeFile("2", false);

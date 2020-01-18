@@ -161,10 +161,19 @@ function duplicateEncode(word){
   return word.map(el => word.reduce((r,e) => r + (e === el ? 1 : 0), 1) > 1 ? el.join(``).split(el).join(`)`) : el.join(``).split(el).join(`(`));
 }
 
+const numTo256 = (num, pow) => pow ? num * 256 ** pow: num;
+
+const ipsBetween = (start, end) => {
+  start = start.split(`.`).map(el => Number(el)).reverse();
+  end = end.split(`.`).map(el => Number(el));
+  return end.reverse().reduce((res, el, i) => res + numTo256(el-start[i], i), 0);
+};
+
 module.exports = {
     longestSlideDown,
     persistence,
     multiplies3and5,
     matrixAddition,
-    duplicateEncode
+    duplicateEncode,
+    ipsBetween
 }
