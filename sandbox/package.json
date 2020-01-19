@@ -1,0 +1,22 @@
+{
+  "name": "lalapackage",
+  "version": "0.0.1",
+  "description": "\u001b[A\u001b[B",
+  "main": "index.js",
+  "scripts": {
+    "test:eslint": "eslint .",
+    "test:mocha": "mocha ",
+    "test": "npm run test:mocha"
+  },
+  "author": "killer229",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "mocha": "^7.0.0"
+  }
+}
