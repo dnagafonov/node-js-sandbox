@@ -21,10 +21,12 @@ const readWrite = async (name, text, type) => {
             await writeFile(fileName, text);
             break;
         case `read`:
-            await readFile(fileName).then(data => console.log(data));
+            await readFile(fileName).then(data => console.log(data.toString()));
+            break;
         default:
             throw new Error(`Invalid type`);
+            break;
     }
 }
 
-readWrite(`test`,`lalalal`, `read`).catch(e => console.error(e.message));
+readWrite(`test`,`lalalal2002`, `read`).catch(e => console.error(e.message));

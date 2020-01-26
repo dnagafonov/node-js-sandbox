@@ -133,6 +133,9 @@ let uniqueInOrder = (iterable) => {
   
 }
 
+const sumDigPow = (a, b) => {
+
+}
 
 module.exports = {
     longestSlideDown,
@@ -141,5 +144,6 @@ module.exports = {
     matrixAddition,
     duplicateEncode,
     ipsBetween,
-    depth
+    depth,
+    sumDigPow
 }
