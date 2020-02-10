@@ -137,11 +137,7 @@ const sumDigPow = (a, b) => {
 
 }
 
-const cake = (x, y) => {
-  git commit -m "feat: add cake task adn tests for it"
-}
-
-cake(900, 200)
+const cake = (x, y) => (x * 70 / 100) < y.split(``).reduce((prev, curr, index) => prev + ((index % 2 === 0) ? curr.charCodeAt(0) : 0), 0) ? `Fire!` : `That was close!`;
 
 module.exports = {
     longestSlideDown,
