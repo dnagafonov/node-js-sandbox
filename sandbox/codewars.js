@@ -137,6 +137,12 @@ const sumDigPow = (a, b) => {
 
 }
 
+const cake = (x, y) => {
+  git commit -m "feat: add cake task adn tests for it"
+}
+
+cake(900, 200)
+
 module.exports = {
     longestSlideDown,
     persistence,
@@ -145,5 +151,6 @@ module.exports = {
     duplicateEncode,
     ipsBetween,
     depth,
-    sumDigPow
+    sumDigPow,
+    cake
 }
