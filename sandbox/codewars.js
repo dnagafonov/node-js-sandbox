@@ -139,6 +139,59 @@ const sumDigPow = (a, b) => {
 
 const cake = (x, y) => (x * 70 / 100) < y.split(``).reduce((prev, curr, index) => prev + ((index % 2 === 0) ? curr.charCodeAt(0) : 0), 0) ? `Fire!` : `That was close!`;
 
+const mygcd = (a, b) => {
+  while(b){
+    
+  }
+  return a;
+}
+
+const factorial = n => {
+  if(n < 0 && n > 13) throw new RangeError();
+  let temp = 1;
+  while(n!==1){
+    n--;
+    temp *= n;
+  }
+  return temp;
+}
+
+const fizzbuzz = n => {
+  let arr =[];
+  for (let i = 1; i != n + 1; i++) {
+    switch (true) {
+      case i % 5 === 0 && i % 3 === 0:
+        arr.push("FizzBuzz");
+        break;
+      case (i % 3 === 0):
+        arr.push("Fizz");
+        break;
+      case i % 5 === 0:
+        arr.push("Buzz");
+        break;
+      default:
+        arr.push(i);
+        break;
+    }
+  }
+  return arr;
+}
+
+const count = s => { 
+  let res = {};
+  s = s.split(``);
+  const keys = [...new Set(s)].sort();
+  keys.map(key => {
+    let times = 0;
+    s.map(el => {
+      if(key === el){
+        res[key] = ++times;
+      }
+    })
+  })
+  return res;
+}
+
 module.exports = {
     longestSlideDown,
     persistence,
@@ -148,5 +201,6 @@ module.exports = {
     ipsBetween,
     depth,
     sumDigPow,
-    cake
+    cake,
+    count
 }
